@@ -1,0 +1,58 @@
+﻿@model Domain.TransaccionesDiaria
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TransaccionesDiaria</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CuentasAhorros.NombreCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CuentasAhorros.NombreCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MontoTransaccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MontoTransaccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoTransaccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoTransaccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaCreacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaCreacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.activo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.activo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IDSecuencial }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

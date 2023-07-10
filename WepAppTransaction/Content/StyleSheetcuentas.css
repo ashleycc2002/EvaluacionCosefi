@@ -1,0 +1,24 @@
+﻿.btn btn-warning {
+    color: #fff;
+    background-color: #d9d54f;
+    border-color: #d9d54f;
+}
+
+.bd-example {
+    padding: 1.5rem;
+    margin-right: 0;
+    margin-left: 0;
+    border-width: 0.2rem;
+}
+
+.bd-example {
+    position: relative;
+    padding: 15rem;
+    margin: 1rem -15px 0;
+    border: solid #f8f9fa;
+}
+
+.style-week {
+    display: inline-block;
+    margin-right: 5px;
+}

@@ -1,0 +1,9 @@
+C:\Users\Kaizen\source\repos\EvaluacionCosefi\Helper\bin\Debug\Helper.dll
+C:\Users\Kaizen\source\repos\EvaluacionCosefi\Helper\bin\Debug\Helper.pdb
+C:\Users\Kaizen\source\repos\EvaluacionCosefi\Helper\bin\Debug\System.Web.Mvc.dll
+C:\Users\Kaizen\source\repos\EvaluacionCosefi\Helper\bin\Debug\System.Web.Mvc.xml
+C:\Users\Kaizen\source\repos\EvaluacionCosefi\Helper\obj\Debug\Helper.csproj.AssemblyReference.cache
+C:\Users\Kaizen\source\repos\EvaluacionCosefi\Helper\obj\Debug\Helper.csproj.CoreCompileInputs.cache
+C:\Users\Kaizen\source\repos\EvaluacionCosefi\Helper\obj\Debug\Helper.csproj.CopyComplete
+C:\Users\Kaizen\source\repos\EvaluacionCosefi\Helper\obj\Debug\Helper.dll
+C:\Users\Kaizen\source\repos\EvaluacionCosefi\Helper\obj\Debug\Helper.pdb

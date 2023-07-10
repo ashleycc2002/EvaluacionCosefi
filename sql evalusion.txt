@@ -1,0 +1,37 @@
+create database Evaluacion
+use Evaluacion
+
+CREATE TABLE CuentasAhorros (
+    IDCliente INT not null PRIMARY KEY Identity(1,1),
+	NombreCliente nvarchar(28) not null,
+	NumeroCuenta varchar(26) not null,
+    MontoApertura DECIMAL(10, 2) not null,
+    BalanceDisponible DECIMAL(10, 2) not null,
+	FechaCreacion datetime,
+	activo bit 
+);
+
+-- Crear la tabla de transacciones diarias
+CREATE TABLE TransaccionesDiarias (
+    IDSecuencial INT not null PRIMARY KEY Identity(1,1),
+    IDCliente INT,
+    MontoTransaccion DECIMAL(10, 2) not null,
+    TipoTransaccion varchar(2) not null,
+	fechaCreacion datetime,
+	activo bit
+    FOREIGN KEY (IDCliente) REFERENCES CuentasAhorros(IDCliente)
+);
+
+ insert into CuentasAhorros
+ values('Sofia', '23-124',2000,2000,GETDATE(),1),
+ ('Alicia', '23-156',3000,3000,GETDATE(),1),
+ ('Irina', '23-154',4000,4000,GETDATE(),1),
+ ('Ana', '23-134',5000,5000,GETDATE(),1)
+
+ insert into TransaccionesDiarias 
+ values(1,20,'ND',GETDATE(),1)
+
+ select * from CuentasAhorros
+ select * from TransaccionesDiarias
+
+ select @@servername

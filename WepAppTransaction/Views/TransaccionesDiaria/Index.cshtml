@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Domain.TransaccionesDiaria>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Crear Nuevo", "Create", null, new {@class="btn btn-success" }  )
+</p>
+
+<table class="table table-bordered">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CuentasAhorros.NombreCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MontoTransaccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoTransaccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fechaCreacion)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CuentasAhorros.NombreCliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MontoTransaccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoTransaccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaCreacion)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.IDSecuencial }, new {@class="btn btn-primary"}) |
+            @Html.ActionLink("Detalle", "Details", new { id=item.IDSecuencial }, new {@class = "btn btn-danger" }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.IDSecuencial }, new { @class = "btn btn-warning" })
+        </td>
+    </tr>
+}
+
+</table>

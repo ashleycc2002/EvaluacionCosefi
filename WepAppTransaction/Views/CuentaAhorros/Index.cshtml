@@ -1,0 +1,67 @@
+﻿@model IEnumerable<Domain.CuentasAhorros>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create Cuenta", "Create",null, new { @class = "btn btn-primary" })
+</p>
+
+<table class= "table table-bordered" >
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IDCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumeroCuenta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MontoApertura)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BalanceDisponible)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaCreacion)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IDCliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreCliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumeroCuenta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MontoApertura)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BalanceDisponible)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaCreacion)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.IDCliente }, new { @class = "btn btn-primary" }) |
+            @Html.ActionLink("Details", "Details", new { id = item.IDCliente }, new {@class = "btn btn-success"}) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.IDCliente }, new {@class= "btn btn-danger" }) |
+            @Html.ActionLink("Deposit", "DepositMoney", new { id = item.IDCliente } ,new {@class= "btn btn-warning" }) |
+            @Html.ActionLink("Retire", "WithdrawMoney",null, new { @class = "btn btn-primary" })
+
+        </td>
+    </tr>
+}
+
+</table>
